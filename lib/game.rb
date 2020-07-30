@@ -22,22 +22,15 @@ class Game
     ] 
   end
 
-
-  # this method currently does not update instance method in initialize
-  # from a seperate class. Is this possible to do? Must do research and check nect time. 
   def condition(option)
     case option
     when 'loaf'
-      @pattern.loaf(@current)
+      @current = @pattern.loaf()
     when 'toad'
-      @pattern.toad(@current)
+      @current = @pattern.toad()
     when 'test'
-      @pattern.test(@current)
+      @current = @pattern.test()
     end
-  end
-
-  def test_board()
-    p @current
   end
 
   def count_neighbours(x, y, grid = @current)

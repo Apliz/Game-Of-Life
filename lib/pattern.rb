@@ -1,12 +1,12 @@
 class Pattern
 
-  attr_accessor :loaf, :toad, :test
+  attr_reader :loaf, :toad, :test
 
   def initialize()
   end
 
-  def loaf(grid)
-    grid = [
+  def loaf()
+    [
       [0, 0, 0, 0, 0, 0, 0, 0], 
       [0, 0, 0, 0, 1, 1, 0, 0], 
       [0, 0, 0, 1, 0, 0, 1, 0], 
@@ -18,7 +18,7 @@ class Pattern
     ]
   end
   
-  def toad(grid)
+  def toad()
     grid = [
       [0, 0, 0, 0, 0, 0, 0, 0], 
       [0, 0, 0, 0, 1, 1, 0, 0], 
@@ -31,7 +31,7 @@ class Pattern
     ]
   end
 
-  def test(grid)
+  def test()
     grid = [
       [0, 1, 1, 0, 1, 1, 1, 0], 
       [0, 0, 0, 1, 0, 1, 0, 0], 
