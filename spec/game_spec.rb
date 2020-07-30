@@ -12,9 +12,3 @@ describe Game do
       expect{ subject.condition('loaf') }.to change{ subject.grid[1][2] }.from(0).to(1)
     end
   end
-
-  # context 'neighbors' do
-  #   it 'initialises cell when 3 neighbors' do
-      
-  #   end
-  # end
