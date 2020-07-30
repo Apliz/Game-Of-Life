@@ -1,8 +1,11 @@
+require_relative 'board.rb'
+
 class Game
 
   attr_reader :grid, :condition
 
-  def initialize
+  def initialize(board = Board.new)
+    @board = board
     @neighbours = 0
     @current = []
     @successor = [
@@ -55,11 +58,6 @@ class Game
     end
   end
 
-  # don't check outermost array edges
-  def check_edge?(x, y)
-    true if (y < 1 || y > 6) || (x < 1 || x > 6 )
-  end
-
   # search neighbour cells
   def count_neighbours(x, y, grid = @current)
     [ [grid[y - 1][x - 1]],
@@ -82,7 +80,7 @@ class Game
   def start(grid = @current)
     grid.each_with_index { |row, y|
       row.each_with_index { |cell, x|
-        next if check_edge?(x, y) == true
+        next if @board.check_edge(x, y) == true
         count_neighbours(x, y)
         ruleset(x, y) ? @successor[y][x] = 1 : @successor[y][x] = 0
         @neighbours = 0
