@@ -6,7 +6,7 @@ As a Developer,
 To pay homage to the late Conway,
 I would like to recreate the Game of Life.
 
-As a cell,
+As a cell,dete
 To be able to exist in my world,
 I wouild like to be able to detec5 the state of cells around me.
 
@@ -16,7 +16,7 @@ I would like to visualise results in a command line interface.
 
 As a user,
 To be able to interact with the game,
-I would like to be able to choose starting conditions
+I would like to be able to choose starting conditions            DONE
 
 As a cell,
 To be able to grow,
