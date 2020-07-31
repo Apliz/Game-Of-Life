@@ -47,3 +47,15 @@ class Game
     p @current = @successor  
   end
 end 
+
+# game now has to be able to iterate through a given number of generations (period [p])
+# needs tests written and tdd approach.
+
+# After iteration, check results in irb and then port over to a visual command line interface.
+# possible gems
+# gem colorize
+# gem tty-prompt
+# gem terminal-table
+
+# more research needed into available gems to create a beautiful command line app. 
+
