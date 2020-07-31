@@ -49,7 +49,7 @@ class Game
     grid.each_with_index { |row, y|
       row.each_with_index { |cell, x|
         next if @board.check_edge(x, y) == true
-        count_neighbours(x, y)
+        count_neighbours(x, y, grid)
         @board.ruleset(x, y, grid, @neighbours) ? @successor[y][x] = 1 : @successor[y][x] = 0
         @neighbours = 0
       }
