@@ -1,7 +1,6 @@
 class Cell
 
   def initialize()
-
   end
 
   def count_neighbours(x, y, grid)
