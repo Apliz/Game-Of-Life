@@ -44,7 +44,14 @@ class Game
         @neighbours = 0
       }
     } 
-    p @current = @successor  
+    grid = @successor
+  end
+
+  def start(n)
+    n.times{
+      iterate()
+      puts @current
+    }
   end
 end 
 
@@ -59,3 +66,11 @@ end
 
 # more research needed into available gems to create a beautiful command line app. 
 
+[[0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 1, 0, 0, 0],
+[0, 0, 1, 0, 0, 1, 0, 0], 
+[0, 0, 1, 0, 0, 1, 0, 0], 
+[0, 0, 0, 1, 0, 0, 0, 0], 
+[0, 0, 0, 0, 0, 0, 0, 0], 
+[0, 0, 0, 0, 0, 0, 0, 0]]

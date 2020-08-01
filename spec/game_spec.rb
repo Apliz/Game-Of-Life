@@ -88,4 +88,15 @@ describe Game do
       end
     end
   end
+
+  describe '.period' do
+    context 'when cycling through n generations of game of life' do
+      it 'cycles up to and including desired generation' do
+        fake_game = double
+        fake_n = 10
+        allow(fake_game).to receive(:period).with(fake_n).and_return(fake_n)
+        expect(subject.start(fake_n)).to eq(fake_game.period(fake_n))
+      end    
+    end
+  end
 end
