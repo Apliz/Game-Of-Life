@@ -44,6 +44,33 @@ class Game
         @neighbours = 0
       }
     } 
-    p @current = @successor  
+    grid = @successor
+  end
+
+  def start(n)
+    n.times{
+      iterate()
+      puts @current
+    }
   end
 end 
+
+# game now has to be able to iterate through a given number of generations (period [p])
+# needs tests written and tdd approach.
+
+# After iteration, check results in irb and then port over to a visual command line interface.
+# possible gems
+# gem colorize
+# gem tty-prompt
+# gem terminal-table
+
+# more research needed into available gems to create a beautiful command line app. 
+
+[[0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 1, 0, 0, 0],
+[0, 0, 1, 0, 0, 1, 0, 0], 
+[0, 0, 1, 0, 0, 1, 0, 0], 
+[0, 0, 0, 1, 0, 0, 0, 0], 
+[0, 0, 0, 0, 0, 0, 0, 0], 
+[0, 0, 0, 0, 0, 0, 0, 0]]
