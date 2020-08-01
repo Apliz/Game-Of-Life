@@ -2,14 +2,14 @@
 
 Ruby solution to John Conway's 'Life' celullar automaton.
 
-## How life works
+### Rules of life
 
 1. Any live cell with **<2** live neighbours _perishes_.  
 2. Any live cell with **2 || 3** live neighbours _lives_.  
 3. Any live cell with **>3** live neighbours _perishes_.  
 4. Any dead cell with **== 3** live neighbours _comes alive_.
 
-## Local usage
+### Local usage
 
 >require and specify
 
@@ -39,7 +39,7 @@ Ruby solution to John Conway's 'Life' celullar automaton.
   2.7.0 :007 > game.start(n)
 ```
 
-### Testing
+#### Testing
 
 Using `rspec` and `simplecov` for coverage
 
@@ -49,32 +49,32 @@ Using `rspec` and `simplecov` for coverage
 
 ## User Stories
 
-As a Developer,
-To pay homage to the late Conway,
-I would like to recreate the Game of Life.
+As a Developer,  
+To pay homage to the late Conway,  
+I would like to recreate the Game of Life.  
   
-As a cell,
-To be able to exist in my world,
+As a Cell,  
+To be able to exist in my world,  
 I can detect the state of cells around me.  
   
-As a user,
-To be able to interact with the game,
-I can choose my starting conditions  
-  
-As a cell,
-To be able to grow,
+As a User,  
+To be able to interact with the game,  
+I can choose my starting conditions.  
+
+As a Cell,  
+To be able to grow,  
 I  switch off if I have 3 live neighbours.  
   
-As a cell,  
+As a Cell,  
 To be able to perish,  
 I would like to switch off If I have more than 3; or less than 2 neighbours.  
 
 ### In the works
   
-As a user,  
+As a User,  
 So I can experiment,  
 I would like to upload grid configurations to the application.  
   
-As a user,  
+As a User,  
 To be able to see the game,  
 I would like to visualise results in a command line interface.  
